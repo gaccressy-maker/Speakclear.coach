@@ -18,25 +18,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5.5vw,68px);font-weight:300;line-height:1.15;max-width:860px;margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards}
 .hero h1 em{font-style:italic;color:var(--gold-light)}
-.hero-sub{font-size:17px;font-weight:300;line-height:1.8;color:var(--muted);max-width:580px;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards}
+.hero-sub{font-size:17px;font-weight:300;line-height:1.8;color:var(--muted);max-width:620px;margin-bottom:16px;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards}
+.hero-sub2{font-size:15px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.38);max-width:620px;opacity:0;animation:fadeUp 0.8s ease 0.7s forwards}
 .divider{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,0.25),transparent)}
 .section-label{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,42px);font-weight:300;line-height:1.2;margin-bottom:28px}
 .section-title em{font-style:italic;color:var(--gold-light)}
 .section-text{font-size:16px;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:20px}
+
 .why{padding:100px 48px;max-width:860px;margin:0 auto}
-.why-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.5vw,28px);font-weight:300;font-style:italic;color:var(--gold-light);border-left:2px solid var(--gold);padding-left:32px;line-height:1.7;margin-bottom:32px}
+.why-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.5vw,27px);font-weight:300;font-style:italic;color:var(--gold-light);border-left:2px solid var(--gold);padding-left:32px;line-height:1.7;margin-bottom:32px}
+
 .approach{background:var(--navy-mid);padding:100px 48px}
 .approach-inner{max-width:860px;margin:0 auto}
 .challenge-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:32px}
 .challenge-item{background:rgba(10,22,40,0.6);padding:26px 28px;font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;border-left:2px solid rgba(201,168,76,0.2);transition:border-color 0.3s}
 .challenge-item:hover{border-left-color:var(--gold)}
+
 .reality{padding:100px 48px;max-width:860px;margin:0 auto}
-.reality-statement{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;line-height:1.4;color:var(--white);margin-bottom:40px}
+.reality-statement{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;line-height:1.4;color:var(--white);margin-bottom:48px}
 .reality-statement em{font-style:italic;color:var(--gold-light)}
-.outcomes{list-style:none;display:flex;flex-direction:column;gap:14px}
-.outcome-item{font-size:15px;font-weight:300;color:var(--off-white);padding:18px 24px;border-left:2px solid rgba(201,168,76,0.25);line-height:1.6;transition:border-color 0.3s}
-.outcome-item:hover{border-left-color:var(--gold)}
+.reality-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:8px}
+.reality-col h4{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.reality-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.reality-item{font-size:14px;font-weight:300;color:var(--muted);padding:16px 20px;border-left:2px solid rgba(201,168,76,0.2);line-height:1.65;transition:border-color 0.3s}
+.reality-item:hover{border-left-color:var(--gold)}
+.reality-item.after{color:var(--off-white);border-left-color:rgba(201,168,76,0.35)}
+
 .process{background:var(--navy-mid);padding:100px 48px}
 .process-inner{max-width:860px;margin:0 auto}
 .steps{display:flex;flex-direction:column;gap:2px;margin-top:48px}
@@ -45,37 +53,42 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .step-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:rgba(201,168,76,0.25);line-height:1;flex-shrink:0;width:44px}
 .step-body h3{font-size:15px;font-weight:500;color:var(--white);margin-bottom:8px}
 .step-body p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.75}
+
 .who{padding:100px 48px;max-width:860px;margin:0 auto}
 .who-list{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:14px}
 .who-item{font-size:16px;font-weight:300;color:var(--off-white);padding:20px 24px;border-left:2px solid rgba(201,168,76,0.25);line-height:1.6;transition:border-color 0.3s}
 .who-item:hover{border-left-color:var(--gold)}
+
 .founding{background:var(--navy-mid);padding:100px 48px;position:relative;overflow:hidden}
 .founding::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.06) 0%,transparent 60%);pointer-events:none}
 .founding-inner{max-width:860px;margin:0 auto;position:relative}
 .founding-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;margin-bottom:32px}
 .founding-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:300;line-height:1.2;margin-bottom:20px}
 .founding-title em{font-style:italic;color:var(--gold-light)}
-.founding-desc{font-size:16px;font-weight:300;color:var(--muted);line-height:1.9;max-width:640px;margin-bottom:36px}
+.founding-desc{font-size:16px;font-weight:300;color:var(--muted);line-height:1.9;max-width:680px;margin-bottom:36px}
 .founding-includes{list-style:none;margin-bottom:44px;display:flex;flex-direction:column;gap:12px}
 .founding-includes li{font-size:14px;font-weight:300;color:var(--off-white);display:flex;align-items:center;gap:14px;line-height:1.6}
 .founding-includes li::before{content:'';display:inline-block;width:20px;height:1px;background:var(--gold);flex-shrink:0}
 .price-row{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
 .price-amount{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:var(--white);line-height:1}
 .price-label{font-size:13px;font-weight:300;color:var(--muted);letter-spacing:1px}
-.founding-note{font-size:13px;color:var(--muted);font-style:italic;line-height:1.7;max-width:520px;margin-bottom:0}
+.founding-note{font-size:13px;color:var(--muted);font-style:italic;line-height:1.7;max-width:520px}
+
 .cta-section{padding:120px 48px;text-align:center;max-width:720px;margin:0 auto}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,42px);font-weight:300;line-height:1.3;margin-bottom:20px}
 .cta-section h2 em{font-style:italic;color:var(--gold-light)}
 .cta-section p{font-size:15px;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:48px;max-width:520px;margin-left:auto;margin-right:auto}
 .btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:18px 48px;text-decoration:none;transition:all 0.3s ease}
 .btn:hover{background:var(--gold-light);transform:translateY(-2px)}
+
 footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center}
 .footer-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:2px;color:var(--white);margin-bottom:6px}
 .footer-brand span{color:var(--gold)}
 .footer-tagline{font-size:12px;font-weight:300;color:var(--muted);margin-bottom:4px}
 .footer-url{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){nav{padding:20px 24px}.hero{padding:110px 24px 80px}.why,.reality,.who,.cta-section{padding:72px 24px}.approach,.process,.founding{padding:72px 24px}.challenge-list{grid-template-columns:1fr}.step{flex-direction:column;gap:16px}.price-amount{font-size:44px}footer{padding:40px 24px}}
+@media(max-width:768px){nav{padding:20px 24px}.hero{padding:110px 24px 80px}.why,.reality,.who,.cta-section{padding:72px 24px}.approach,.process,.founding{padding:72px 24px}.challenge-list{grid-template-columns:1fr}.reality-cols{grid-template-columns:1fr}.step{flex-direction:column;gap:16px}.price-amount{font-size:44px}footer{padding:40px 24px}}
 </style>
 </head>
 <body>
@@ -87,15 +100,18 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="hero">
 <div class="hero-eyebrow">Professional Conversational Coaching</div>
 <h1>Professional Conversational Coaching for <em>International Professionals</em></h1>
-<p class="hero-sub">Speak with greater clarity, confidence, and natural flow in real-world business conversations.</p>
+<p class="hero-sub">Speak with clarity, confidence, and natural flow in real-world business conversations — even under pressure.</p>
+<p class="hero-sub2">Build the ability to think and respond naturally in English during fast-paced professional conversations, without hesitation or translating in your head.</p>
 </div>
 
 <div class="divider"></div>
 
 <div class="why">
 <div class="section-label">Why SpeakClear Was Created</div>
-<p class="why-quote">In my experience working with international professionals, including time spent in Southeast Asia, I met many highly capable individuals who understood English well — yet felt less confident in fast-paced professional conversations.</p>
-<p class="section-text">SpeakClear was created to help bridge that gap — supporting professionals to communicate more naturally, clearly, and confidently in real-world situations.</p>
+<p class="why-quote">In my experience working with international professionals, including time spent in Southeast Asia, I met many highly capable individuals who understood English well — yet still felt less confident during fast-paced, real-world professional conversations.</p>
+<p class="section-text">With over 30 years of experience as a professional trainer across a range of industries, including construction consultancy, I have seen first-hand how communication under pressure affects not just language ability, but performance, decision-making, and confidence in professional environments.</p>
+<p class="section-text">What I consistently found is that the issue is rarely knowledge of English — it is the ability to think, respond, and communicate naturally in real time under pressure.</p>
+<p class="section-text">SpeakClear was created to address exactly that — helping professionals move from translated, hesitant communication to clear, confident, and natural conversation in real-world situations.</p>
 </div>
 
 <div class="divider"></div>
@@ -120,13 +136,26 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="reality">
 <div class="section-label">The Reality</div>
 <p class="reality-statement">You already speak English — <em>we help you sound like the professional you already are.</em></p>
-<p class="section-text">Clients often experience:</p>
-<ul class="outcomes">
-<li class="outcome-item">A calmer, more natural conversational flow</li>
-<li class="outcome-item">Greater clarity and confidence</li>
-<li class="outcome-item">More ease in real conversations</li>
-<li class="outcome-item">Stronger presence in professional situations</li>
+<div class="reality-cols">
+<div class="reality-col">
+<h4>Before SpeakClear</h4>
+<ul class="reality-list">
+<li class="reality-item">Knowing what to say but losing fluency in the moment</li>
+<li class="reality-item">Translating thoughts before speaking under pressure</li>
+<li class="reality-item">Confidence dropping in fast-paced conversations</li>
+<li class="reality-item">Feeling less natural in real communication than in preparation</li>
 </ul>
+</div>
+<div class="reality-col">
+<h4>After Coaching</h4>
+<ul class="reality-list">
+<li class="reality-item after">Speaking more naturally without translating in your head</li>
+<li class="reality-item after">Responding smoothly in real-time discussions</li>
+<li class="reality-item after">Maintaining confidence under pressure</li>
+<li class="reality-item after">Communicating with clarity and presence in professional situations</li>
+</ul>
+</div>
+</div>
 </div>
 
 <div class="divider"></div>
@@ -179,13 +208,13 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="founding-inner">
 <div class="founding-badge">Limited Availability</div>
 <h2 class="founding-title">Founding Client <em>Programme</em></h2>
-<p class="founding-desc">A structured 6-session coaching programme designed to improve clarity, confidence, and natural communication in real-world situations.</p>
+<p class="founding-desc">A structured 6-session coaching programme designed to improve clarity, confidence, and natural communication in real-world situations — not just language ability, but performance under pressure.</p>
 <p class="section-text" style="color:var(--off-white);font-size:15px;margin-bottom:16px;">Includes:</p>
 <ul class="founding-includes">
-<li>Personal 30-minute assessment</li>
+<li>Personal 30-minute communication assessment</li>
 <li>Personalised preparation system</li>
 <li>6 one-to-one coaching sessions</li>
-<li>Confidence development and feedback</li>
+<li>Live conversational practice under realistic pressure</li>
 <li>Progress review and refinement</li>
 </ul>
 <div class="price-row">
@@ -198,8 +227,8 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 
 <div class="cta-section">
 <h2>Ready to communicate with <em>clarity and confidence?</em></h2>
-<p>Apply for your personalised assessment to explore whether SpeakClear is right for you.</p>
-<a href="FORM_URL" class="btn">Apply for Assessment</a>
+<p>Applications are reviewed individually to ensure the programme is the right fit for your communication goals and professional context.</p>
+<a href="FORM_URL" class="btn">Apply for Personal Assessment</a>
 </div>
 
 <footer>
