@@ -24,18 +24,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,42px);font-weight:300;line-height:1.2;margin-bottom:28px}
 .section-title em{font-style:italic;color:var(--gold-light)}
 .section-text{font-size:16px;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:20px}
-
 .why{padding:100px 48px;max-width:860px;margin:0 auto}
 .insight-block{background:var(--navy-mid);border-left:3px solid var(--gold);padding:32px 36px;margin-bottom:40px}
 .insight-block p{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,30px);font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.6;margin-bottom:12px}
 .insight-block span{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;display:block}
-
 .approach{background:var(--navy-mid);padding:100px 48px}
 .approach-inner{max-width:860px;margin:0 auto}
 .challenge-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:32px}
 .challenge-item{background:rgba(10,22,40,0.6);padding:26px 28px;font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;border-left:2px solid rgba(201,168,76,0.2);transition:border-color 0.3s}
 .challenge-item:hover{border-left-color:var(--gold)}
-
 .reality{padding:100px 48px;max-width:860px;margin:0 auto}
 .reality-statement{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;line-height:1.4;color:var(--white);margin-bottom:48px}
 .reality-statement em{font-style:italic;color:var(--gold-light)}
@@ -44,7 +41,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .reality-list{list-style:none;display:flex;flex-direction:column;gap:12px}
 .reality-item{font-size:14px;font-weight:300;color:var(--muted);padding:16px 20px;border-left:2px solid rgba(201,168,76,0.2);line-height:1.65;transition:border-color 0.3s}
 .reality-item.after{color:var(--off-white);border-left-color:rgba(201,168,76,0.35)}
-
 .process{background:var(--navy-mid);padding:100px 48px}
 .process-inner{max-width:860px;margin:0 auto}
 .steps{display:flex;flex-direction:column;gap:2px;margin-top:48px}
@@ -53,42 +49,46 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .step-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:rgba(201,168,76,0.25);line-height:1;flex-shrink:0;width:44px}
 .step-body h3{font-size:15px;font-weight:500;color:var(--white);margin-bottom:8px}
 .step-body p{font-size:13px;font-weight:300;color:var(--muted);line-height:1.75}
-
 .who{padding:100px 48px;max-width:860px;margin:0 auto}
 .who-list{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:14px}
 .who-item{font-size:16px;font-weight:300;color:var(--off-white);padding:20px 24px;border-left:2px solid rgba(201,168,76,0.25);line-height:1.6;transition:border-color 0.3s}
 .who-item:hover{border-left-color:var(--gold)}
 
-.founding{background:var(--navy-mid);padding:100px 48px;position:relative;overflow:hidden}
-.founding::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.06) 0%,transparent 60%);pointer-events:none}
-.founding-inner{max-width:860px;margin:0 auto;position:relative}
-.founding-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;margin-bottom:32px}
-.founding-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,46px);font-weight:300;line-height:1.2;margin-bottom:20px}
-.founding-title em{font-style:italic;color:var(--gold-light)}
-.founding-desc{font-size:16px;font-weight:300;color:var(--muted);line-height:1.9;max-width:680px;margin-bottom:36px}
-.founding-includes{list-style:none;margin-bottom:44px;display:flex;flex-direction:column;gap:12px}
-.founding-includes li{font-size:14px;font-weight:300;color:var(--off-white);display:flex;align-items:center;gap:14px;line-height:1.6}
-.founding-includes li::before{content:'';display:inline-block;width:20px;height:1px;background:var(--gold);flex-shrink:0}
-.price-row{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}
-.price-amount{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:var(--white);line-height:1}
+/* PRICING SECTION */
+.pricing{background:var(--navy-mid);padding:100px 48px;position:relative;overflow:hidden}
+.pricing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.06) 0%,transparent 60%);pointer-events:none}
+.pricing-inner{max-width:860px;margin:0 auto;position:relative}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.pricing-card{background:rgba(10,22,40,0.6);border:1px solid rgba(201,168,76,0.15);padding:40px 36px;display:flex;flex-direction:column;transition:border-color 0.3s}
+.pricing-card:hover{border-color:rgba(201,168,76,0.4)}
+.pricing-card.featured{border-color:rgba(201,168,76,0.35);background:rgba(10,22,40,0.85)}
+.pricing-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;margin-bottom:24px;align-self:flex-start}
+.pricing-card h3{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.5vw,30px);font-weight:300;line-height:1.2;margin-bottom:12px}
+.pricing-card h3 em{font-style:italic;color:var(--gold-light)}
+.pricing-desc{font-size:14px;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:28px;flex-grow:1}
+.pricing-includes{list-style:none;margin-bottom:36px;display:flex;flex-direction:column;gap:10px}
+.pricing-includes li{font-size:13px;font-weight:300;color:var(--off-white);display:flex;align-items:center;gap:12px;line-height:1.6}
+.pricing-includes li::before{content:'';display:inline-block;width:16px;height:1px;background:var(--gold);flex-shrink:0}
+.price-row{display:flex;align-items:baseline;gap:12px;margin-bottom:28px}
+.price-amount{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--white);line-height:1}
 .price-label{font-size:13px;font-weight:300;color:var(--muted);letter-spacing:1px}
-.founding-note{font-size:13px;color:var(--muted);font-style:italic;line-height:1.7;max-width:520px}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:18px 48px;text-decoration:none;transition:all 0.3s ease;text-align:center}
+.btn:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:18px 48px;text-decoration:none;transition:all 0.3s ease;text-align:center}
+.btn-outline:hover{background:rgba(201,168,76,0.08);transform:translateY(-2px)}
+.pricing-note{font-size:13px;color:var(--muted);font-style:italic;line-height:1.7;margin-top:12px}
 
 .cta-section{padding:120px 48px;text-align:center;max-width:720px;margin:0 auto}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,42px);font-weight:300;line-height:1.3;margin-bottom:20px}
 .cta-section h2 em{font-style:italic;color:var(--gold-light)}
 .cta-section p{font-size:15px;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:48px;max-width:520px;margin-left:auto;margin-right:auto}
-.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:18px 48px;text-decoration:none;transition:all 0.3s ease}
-.btn:hover{background:var(--gold-light);transform:translateY(-2px)}
-
 footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center}
 .footer-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:2px;color:var(--white);margin-bottom:6px}
 .footer-brand span{color:var(--gold)}
 .footer-tagline{font-size:12px;font-weight:300;color:var(--muted);margin-bottom:4px}
 .footer-url{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25)}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){nav{padding:20px 24px}.hero{padding:110px 24px 80px}.why,.reality,.who,.cta-section{padding:72px 24px}.approach,.process,.founding{padding:72px 24px}.challenge-list{grid-template-columns:1fr}.reality-cols{grid-template-columns:1fr}.step{flex-direction:column;gap:16px}.price-amount{font-size:44px}footer{padding:40px 24px}}
+@media(max-width:768px){nav{padding:20px 24px}.hero{padding:110px 24px 80px}.why,.reality,.who,.cta-section{padding:72px 24px}.approach,.process,.pricing{padding:72px 24px}.challenge-list{grid-template-columns:1fr}.reality-cols{grid-template-columns:1fr}.step{flex-direction:column;gap:16px}.pricing-grid{grid-template-columns:1fr}.price-amount{font-size:44px}footer{padding:40px 24px}}
 </style>
 </head>
 <body>
@@ -98,9 +98,9 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 </nav>
 
 <div class="hero">
-<div class="hero-eyebrow">Conversational Confidence Coaching</div>
-<h1>Speak with clarity, confidence, and <em>natural flow</em> in every conversation that matters</h1>
-<p class="hero-sub">So you can speak like the professional you already are.</p>
+<div class="hero-eyebrow">Professional Conversational Coaching</div>
+<h1>You speak English every day. So why does it still hold you back <em>at work?</em></h1>
+<p class="hero-sub">For professionals in Malaysia, Vietnam and Singapore who know their job — but feel their English is the one thing stopping them from going further.</p>
 </div>
 
 <div class="divider"></div>
@@ -108,12 +108,12 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="why">
 <div class="section-label">The Insight Behind SpeakClear</div>
 <div class="insight-block">
-<p>If you can't say it — you can't hear it.</p>
-<span>Pronunciation is not just about speaking. It is the key to understanding and being understood. When you learn to say words naturally, you begin to hear them more clearly too. That is where real communication confidence begins.</span>
+<p>If you can't say it clearly — people stop listening.</p>
+<span>In Malaysia, Vietnam and Singapore, I kept meeting the same person. Talented. Hardworking. Deserving of the next step up. But in meetings, with clients, with senior colleagues — something got in the way. Not knowledge. Not ability. Just the moment between thinking and speaking — where confidence drops, pronunciation lets you down, and the professional you actually are doesn't come through.</span>
 </div>
-<p class="section-text">In my experience working with people who use English every day, I kept finding the same thing — it was rarely a knowledge problem. Most people already understood English well. What held them back was the ability to think, respond, and express themselves naturally in the moment.</p>
-<p class="section-text">With over 30 years working as a professional trainer across a range of industries, I have seen first-hand how much communication under pressure affects confidence, performance and opportunity — for people at every stage of their career.</p>
-<p class="section-text">SpeakClear was created for anyone who wants to move from hesitant, translated communication to natural, confident conversation — so they can speak like the professional they already are.</p>
+<p class="section-text">Pronunciation is not just about speaking. It is the key to understanding and being understood. When you learn to say words naturally, you begin to hear them more clearly too. That is where real communication confidence begins.</p>
+<p class="section-text">With over 30 years working as a professional across demanding industries, I have seen first-hand how much communication under pressure affects confidence, performance and opportunity — for people at every stage of their career.</p>
+<p class="section-text">SpeakClear was created specifically for professionals whose English should reflect how capable they actually are.</p>
 </div>
 
 <div class="divider"></div>
@@ -123,12 +123,12 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="section-label">Our Approach</div>
 <h2 class="section-title">More than <em>traditional</em> English teaching</h2>
 <p class="section-text">SpeakClear is not a grammar course. It is not a classroom. It is a warm, relaxed coaching space where real conversation is practised in real situations — at your own pace, without the fear of getting it wrong.</p>
-<p class="section-text" style="color:var(--off-white);font-size:15px;margin-bottom:8px;">What many people experience before coming to SpeakClear:</p>
+<p class="section-text" style="color:var(--off-white);font-size:15px;margin-bottom:8px;">What many professionals experience before coming to SpeakClear:</p>
 <ul class="challenge-list">
-<li class="challenge-item">Knowing what to say but struggling to say it naturally</li>
-<li class="challenge-item">Confidence dropping in fast-moving conversations</li>
-<li class="challenge-item">Translating in your head before you can speak</li>
-<li class="challenge-item">Pronunciation making communication harder than it should be</li>
+<li class="challenge-item">Knowing what to say but struggling to say it naturally in the moment</li>
+<li class="challenge-item">Confidence dropping in fast-moving meetings and presentations</li>
+<li class="challenge-item">Translating in your head before you can speak — losing your place</li>
+<li class="challenge-item">Pronunciation making it harder to be taken seriously than you deserve</li>
 </ul>
 </div>
 </div>
@@ -145,7 +145,7 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <li class="reality-item">Translating thoughts before speaking</li>
 <li class="reality-item">Losing confidence in the moment</li>
 <li class="reality-item">Pronunciation making conversations harder</li>
-<li class="reality-item">Feeling less natural than you know you can be</li>
+<li class="reality-item">Feeling less capable than you know you are</li>
 </ul>
 </div>
 <div class="reality-col">
@@ -195,24 +195,47 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 
 <div class="who">
 <div class="section-label">Who This Is For</div>
-<h2 class="section-title">For anyone who uses English and wants to <em>communicate with more confidence</em></h2>
+<h2 class="section-title">For professionals in Malaysia, Vietnam and Singapore ready to <em>communicate at their level</em></h2>
 <ul class="who-list">
-<li class="who-item">People working in English every day who want to express themselves more naturally</li>
-<li class="who-item">Those moving up in their career who want their English to match their ability</li>
-<li class="who-item">Hospitality and client-facing professionals working with international guests</li>
-<li class="who-item">Anyone who knows what they want to say — but wants to say it with more confidence</li>
+<li class="who-item">Professionals working in English every day who are ready for the next step in their career</li>
+<li class="who-item">People whose English confidence doesn't yet match how capable they actually are</li>
+<li class="who-item">Anyone whose pronunciation or hesitation is holding them back in meetings, presentations or with senior colleagues</li>
+<li class="who-item">Ambitious professionals who know their English should reflect how good they really are</li>
 </ul>
 </div>
 
 <div class="divider"></div>
 
-<div class="founding">
-<div class="founding-inner">
-<div class="founding-badge">Limited Availability</div>
-<h2 class="founding-title">Founding Client <em>Programme</em></h2>
-<p class="founding-desc">A structured 6-session coaching programme for people ready to move from hesitant communication to natural, confident conversation — at every level of their career.</p>
-<p class="section-text" style="color:var(--off-white);font-size:15px;margin-bottom:16px;">Includes:</p>
-<ul class="founding-includes">
+<div class="pricing">
+<div class="pricing-inner">
+<div class="section-label">Coaching Programmes</div>
+<h2 class="section-title">Two ways to <em>get started</em></h2>
+<p class="section-text">Begin with a single session to experience the coaching firsthand — or commit to the full programme for a complete transformation in how you communicate professionally.</p>
+
+<div class="pricing-grid">
+
+<div class="pricing-card">
+<div class="pricing-badge">Start Here</div>
+<h3>Single <em>Session</em></h3>
+<p class="pricing-desc">One focused 60-minute coaching session. Experience the SpeakClear method firsthand — no commitment, no pressure. The perfect first step.</p>
+<ul class="pricing-includes">
+<li>60-minute one-to-one session via Zoom</li>
+<li>Focused on your specific situation</li>
+<li>Pronunciation and confidence work</li>
+<li>Immediate, practical techniques</li>
+</ul>
+<div class="price-row">
+<div class="price-amount">£55</div>
+<div class="price-label">Single Session</div>
+</div>
+<a href="https://checkout.revolut.com/pay/b3886afd-d96c-499c-bed1-dd7ac1d3bff5" class="btn">Book Your Session</a>
+</div>
+
+<div class="pricing-card featured">
+<div class="pricing-badge">Full Programme</div>
+<h3>Founding Client <em>Programme</em></h3>
+<p class="pricing-desc">A structured 6-session coaching programme for professionals ready to move from hesitant communication to natural, confident conversation.</p>
+<ul class="pricing-includes">
 <li>Tailored personal assessment</li>
 <li>Personalised preparation system</li>
 <li>6 one-to-one coaching sessions via Zoom</li>
@@ -223,19 +246,24 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="price-amount">£297</div>
 <div class="price-label">Founding Client Rate</div>
 </div>
-<p class="founding-note">Places are limited to ensure every client receives personalised attention and support throughout the programme.</p>
+<a href="https://tally.so/r/kdJWVJ" class="btn">Apply for Programme</a>
+<p class="pricing-note">Places are limited to ensure every client receives personalised attention throughout the programme.</p>
+</div>
+
+</div>
 </div>
 </div>
 
 <div class="cta-section">
 <h2>Ready to speak with <em>more confidence?</em></h2>
-<p>Apply for your tailored personal assessment. Applications are reviewed individually to make sure the programme is the right fit for you.</p>
-<a href="https://tally.so/r/kdJWVJ" class="btn">Apply for Personal Assessment</a>
+<p>Start with a single session and experience the difference firsthand — or apply directly for the full programme. Either way, the first step is yours to take.</p>
+<a href="https://checkout.revolut.com/pay/b3886afd-d96c-499c-bed1-dd7ac1d3bff5" class="btn" style="margin-right:16px;margin-bottom:16px;">Book Single Session — £55</a>
+<a href="https://tally.so/r/kdJWVJ" class="btn-outline">Apply for Full Programme</a>
 </div>
 
 <footer>
 <div class="footer-brand">Speak<span>Clear</span></div>
-<div class="footer-tagline">Conversational Confidence Coaching</div>
+<div class="footer-tagline">Professional Conversational Coaching</div>
 <div class="footer-url">speakclear.coach</div>
 </footer>
 
