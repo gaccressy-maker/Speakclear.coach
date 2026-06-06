@@ -26,8 +26,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .section-text{font-size:16px;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:20px}
 .why{padding:100px 48px;max-width:860px;margin:0 auto}
 .insight-block{background:var(--navy-mid);border-left:3px solid var(--gold);padding:32px 36px;margin-bottom:40px}
-.insight-block p{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,30px);font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.6;margin-bottom:12px}
-.insight-block span{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;display:block}
+.insight-block p{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,30px);font-weight:300;font-style:italic;color:var(--gold-light);line-height:1.6;margin-bottom:16px}
+.insight-block .creator{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);font-weight:300;color:var(--white);line-height:1.6;margin-bottom:0;display:block}
 .approach{background:var(--navy-mid);padding:100px 48px}
 .approach-inner{max-width:860px;margin:0 auto}
 .challenge-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:32px}
@@ -36,10 +36,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 48px;display:fl
 .reality{padding:100px 48px;max-width:860px;margin:0 auto}
 .reality-statement{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;line-height:1.4;color:var(--white);margin-bottom:48px}
 .reality-statement em{font-style:italic;color:var(--gold-light)}
-.reality-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.reality-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .reality-col h4{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.reality-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-.reality-item{font-size:14px;font-weight:300;color:var(--muted);padding:16px 20px;border-left:2px solid rgba(201,168,76,0.2);line-height:1.65;transition:border-color 0.3s;min-height:60px;display:flex;align-items:center}
+.reality-list{list-style:none;display:grid;grid-template-rows:repeat(5,1fr);gap:12px}
+.reality-item{font-size:14px;font-weight:300;color:var(--muted);padding:16px 20px;border-left:2px solid rgba(201,168,76,0.2);line-height:1.65;transition:border-color 0.3s;display:flex;align-items:center}
 .reality-item.after{color:var(--off-white);border-left-color:rgba(201,168,76,0.35)}
 .process{background:var(--navy-mid);padding:100px 48px}
 .process-inner{max-width:860px;margin:0 auto}
@@ -84,7 +84,7 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 .footer-tagline{font-size:12px;font-weight:300;color:var(--muted);margin-bottom:4px}
 .footer-url{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){nav{padding:20px 24px}.hero{padding:110px 24px 80px}.why,.reality,.who,.cta-section{padding:72px 24px}.approach,.process,.pricing{padding:72px 24px}.challenge-list{grid-template-columns:1fr}.reality-cols{grid-template-columns:1fr}.step{flex-direction:column;gap:16px}.pricing-grid{grid-template-columns:1fr}.price-amount{font-size:44px}footer{padding:40px 24px}}
+@media(max-width:768px){nav{padding:20px 24px}.hero{padding:110px 24px 80px}.why,.reality,.who,.cta-section{padding:72px 24px}.approach,.process,.pricing{padding:72px 24px}.challenge-list{grid-template-columns:1fr}.reality-cols{grid-template-columns:1fr}.reality-list{grid-template-rows:auto}.step{flex-direction:column;gap:16px}.pricing-grid{grid-template-columns:1fr}.price-amount{font-size:44px}footer{padding:40px 24px}}
 </style>
 </head>
 <body>
@@ -105,7 +105,7 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 <div class="section-label">The Insight Behind SpeakClear</div>
 <div class="insight-block">
 <p>If you can't say it clearly — people stop listening.</p>
-<span>SpeakClear was created by Graham Cressi following years spent living and working across Southeast Asia — where he witnessed first-hand the same barrier holding talented professionals back time and again.</span>
+<span class="creator">SpeakClear was created by Graham Cressi following years spent living and working across Southeast Asia — where he witnessed first-hand the same barrier holding talented professionals back time and again.</span>
 </div>
 <p class="section-text">In Malaysia, Singapore and across Asia, I kept meeting the same person. Talented. Hardworking. Deserving of the next step up. But in meetings, with clients, with senior colleagues — something got in the way. Not knowledge. Not ability. Just the moment between thinking and speaking — where confidence drops, pronunciation lets you down, and the professional you actually are doesn't come through.</p>
 <p class="section-text">Pronunciation is not just about speaking. It is the key to understanding and being understood. When you learn to say words naturally, you begin to hear them more clearly too. That is where real communication confidence begins.</p>
@@ -269,5 +269,6 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px;text-align:center
 
 </body>
 </html>
+
 
 Sent from My iPhone
