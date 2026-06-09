@@ -14,24 +14,28 @@ body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);
 .brand{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;letter-spacing:2px;text-align:center;margin-bottom:8px}
 .brand span{color:var(--gold)}
 .brand-sub{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:48px}
-/* INTRO */
 .intro{text-align:center;animation:fadeUp 0.6s ease}
 .intro h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,48px);font-weight:300;line-height:1.2;margin-bottom:24px}
 .intro h1 em{font-style:italic;color:var(--gold-light)}
 .intro p{font-size:16px;font-weight:300;line-height:1.8;color:var(--muted);max-width:520px;margin:0 auto 16px}
 .intro .meta{font-size:13px;color:var(--gold);letter-spacing:1px;margin:32px 0 40px}
-/* PROGRESS */
 .progress-bar{height:2px;background:rgba(201,168,76,0.15);margin-bottom:48px;border-radius:2px;overflow:hidden}
 .progress-fill{height:100%;background:var(--gold);width:0%;transition:width 0.4s ease}
 .q-count{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;text-align:center}
-/* QUESTION */
 .question{animation:fadeUp 0.4s ease}
 .q-category{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;text-align:center}
 .q-text{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.5vw,32px);font-weight:300;line-height:1.35;text-align:center;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
 .options{display:flex;flex-direction:column;gap:12px;max-width:520px;margin:0 auto}
 .option{background:var(--navy-mid);border:1px solid rgba(201,168,76,0.15);padding:20px 24px;font-size:15px;font-weight:300;color:var(--off-white);text-align:left;cursor:pointer;transition:all 0.25s ease;border-radius:2px;line-height:1.5}
 .option:hover{border-color:var(--gold);background:rgba(17,34,64,0.9);transform:translateX(4px)}
-/* RESULTS */
+.name-screen{text-align:center;animation:fadeUp 0.5s ease}
+.name-screen h2{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.5vw,36px);font-weight:300;line-height:1.3;margin-bottom:16px}
+.name-screen h2 em{font-style:italic;color:var(--gold-light)}
+.name-screen p{font-size:15px;font-weight:300;color:var(--muted);margin-bottom:32px;line-height:1.7}
+.input-group{display:flex;flex-direction:column;gap:14px;max-width:400px;margin:0 auto 28px}
+.field{background:var(--navy-mid);border:1px solid rgba(201,168,76,0.2);padding:16px 20px;font-size:15px;font-weight:300;color:var(--white);font-family:'DM Sans',sans-serif;border-radius:2px;outline:none;transition:border-color 0.3s;width:100%}
+.field:focus{border-color:var(--gold)}
+.field::placeholder{color:var(--muted)}
 .results{animation:fadeUp 0.6s ease}
 .results h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,40px);font-weight:300;line-height:1.25;text-align:center;margin-bottom:12px}
 .results h2 em{font-style:italic;color:var(--gold-light)}
@@ -58,12 +62,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);
 .cta-box p{font-size:15px;font-weight:300;line-height:1.7;color:var(--muted);max-width:460px;margin:0 auto 28px}
 .btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:18px 44px;text-decoration:none;transition:all 0.3s ease;border:none;cursor:pointer;border-radius:2px}
 .btn:hover{background:var(--gold-light);transform:translateY(-2px)}
-.start-btn{margin-top:8px}
 .restart{display:block;margin:28px auto 0;background:none;border:none;color:var(--muted);font-size:12px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;transition:color 0.3s}
 .restart:hover{color:var(--gold)}
 .hidden{display:none}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:600px){.wrap{padding:32px 20px 60px}.option{padding:18px 20px;font-size:14px}}
+@media(max-width:600px){.wrap{padding:32px 20px 60px}.option{padding:18px 20px;font-size:14px}.input-group{max-width:100%}}
 </style>
 </head>
 <body>
@@ -71,47 +74,57 @@ body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);
 <div class="brand">Speak<span>Clear</span></div>
 <div class="brand-sub">Professional Conversational Coaching</div>
 
-<!-- INTRO -->
 <div id="intro" class="intro">
 <h1>How confident is your English <em>really?</em></h1>
 <p>You speak English every day. But does it reflect how capable you actually are — in meetings, with clients, when it matters most?</p>
 <p>This quick assessment shows you exactly where your spoken English is strong, and where a little focused coaching would make the biggest difference.</p>
 <div class="meta">8 questions · under 2 minutes · instant result</div>
-<button class="btn start-btn" onclick="startQuiz()">Start the Assessment</button>
+<button class="btn" onclick="startQuiz()">Start the Assessment</button>
 </div>
 
-<!-- QUIZ -->
 <div id="quiz" class="hidden">
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 <div class="q-count" id="qCount"></div>
-<div class="question" id="questionBox"></div>
+<div id="questionBox"></div>
 </div>
 
-<!-- RESULTS -->
+<div id="nameScreen" class="name-screen hidden">
+<h2>Almost there — <em>your results are ready</em></h2>
+<p>Enter your name and email to see your full breakdown. Graham will also be able to follow up personally with advice tailored to your results.</p>
+<div class="input-group">
+<input class="field" type="text" id="userName" placeholder="Your name" />
+<input class="field" type="email" id="userEmail" placeholder="Your email address" />
+</div>
+<button class="btn" onclick="submitAndShow()">See My Results</button>
+<p style="font-size:12px;color:var(--muted);margin-top:16px;">No spam. Just your results and a personal note from Graham if relevant.</p>
+</div>
+
 <div id="results" class="results hidden"></div>
 </div>
 
 <script>
+const FORMSPREE_URL = 'https://formspree.io/f/mdavzqnd';
+
 const questions = [
-{cat:"Real-Time Response", q:"In a fast-moving meeting, when you want to make a point, what usually happens?",
-opts:[{t:"I jump in easily and say what I mean",s:3},{t:"I get there, but a beat slower than I'd like",s:2},{t:"By the time I've formed it, the moment's gone",s:1},{t:"I often stay quiet rather than risk it",s:0}], area:"response"},
-{cat:"Translation Habit", q:"When you speak English, are you thinking in another language first?",
-opts:[{t:"No — I think directly in English",s:3},{t:"Sometimes, under pressure",s:2},{t:"Often — I translate in my head first",s:1},{t:"Almost always, and it slows me down",s:0}], area:"response"},
-{cat:"Pronunciation", q:"Do people ever ask you to repeat yourself?",
-opts:[{t:"Rarely or never",s:3},{t:"Occasionally, on certain words",s:2},{t:"Fairly often, especially on calls",s:1},{t:"Yes — and it knocks my confidence",s:0}], area:"pronunciation"},
-{cat:"Pronunciation", q:"How confident are you with the rhythm and stress of spoken English?",
-opts:[{t:"Very — it feels natural",s:3},{t:"Mostly fine",s:2},{t:"I'm aware mine sounds 'off' sometimes",s:1},{t:"It's something I struggle with",s:0}], area:"pronunciation"},
-{cat:"Vocabulary Range", q:"When you need a precise or professional word, can you find it?",
-opts:[{t:"Yes — I have the range I need",s:3},{t:"Usually, with the odd gap",s:2},{t:"I often settle for a simpler word",s:1},{t:"I frequently can't find the right one",s:0}], area:"vocabulary"},
-{cat:"Vocabulary Range", q:"How comfortable are you with idioms and natural everyday phrasing?",
-opts:[{t:"Very comfortable",s:3},{t:"Reasonably",s:2},{t:"I understand them but rarely use them",s:1},{t:"They often confuse me",s:0}], area:"vocabulary"},
-{cat:"Confidence Under Pressure", q:"Presenting or speaking to senior colleagues, how do you feel?",
-opts:[{t:"Confident and in control",s:3},{t:"A bit nervous but I manage",s:2},{t:"My English gets worse under the pressure",s:1},{t:"I dread it and avoid it where I can",s:0}], area:"confidence"},
-{cat:"Confidence Under Pressure", q:"Overall — is your English holding your career back?",
-opts:[{t:"No, it's an asset",s:3},{t:"Not really, but it could be sharper",s:2},{t:"Yes, a little",s:1},{t:"Yes — it's the main thing in my way",s:0}], area:"confidence"}
+{cat:"Real-Time Response",q:"In a fast-moving meeting, when you want to make a point, what usually happens?",
+opts:[{t:"I jump in easily and say what I mean",s:3},{t:"I get there, but a beat slower than I'd like",s:2},{t:"By the time I've formed it, the moment's gone",s:1},{t:"I often stay quiet rather than risk it",s:0}],area:"response"},
+{cat:"Translation Habit",q:"When you speak English, are you thinking in another language first?",
+opts:[{t:"No — I think directly in English",s:3},{t:"Sometimes, under pressure",s:2},{t:"Often — I translate in my head first",s:1},{t:"Almost always, and it slows me down",s:0}],area:"response"},
+{cat:"Pronunciation",q:"Do people ever ask you to repeat yourself?",
+opts:[{t:"Rarely or never",s:3},{t:"Occasionally, on certain words",s:2},{t:"Fairly often, especially on calls",s:1},{t:"Yes — and it knocks my confidence",s:0}],area:"pronunciation"},
+{cat:"Pronunciation",q:"How confident are you with the rhythm and stress of spoken English?",
+opts:[{t:"Very — it feels natural",s:3},{t:"Mostly fine",s:2},{t:"I'm aware mine sounds 'off' sometimes",s:1},{t:"It's something I struggle with",s:0}],area:"pronunciation"},
+{cat:"Vocabulary Range",q:"When you need a precise or professional word, can you find it?",
+opts:[{t:"Yes — I have the range I need",s:3},{t:"Usually, with the odd gap",s:2},{t:"I often settle for a simpler word",s:1},{t:"I frequently can't find the right one",s:0}],area:"vocabulary"},
+{cat:"Vocabulary Range",q:"How comfortable are you with idioms and natural everyday phrasing?",
+opts:[{t:"Very comfortable",s:3},{t:"Reasonably",s:2},{t:"I understand them but rarely use them",s:1},{t:"They often confuse me",s:0}],area:"vocabulary"},
+{cat:"Confidence Under Pressure",q:"Presenting or speaking to senior colleagues, how do you feel?",
+opts:[{t:"Confident and in control",s:3},{t:"A bit nervous but I manage",s:2},{t:"My English gets worse under the pressure",s:1},{t:"I dread it and avoid it where I can",s:0}],area:"confidence"},
+{cat:"Confidence Under Pressure",q:"Overall — is your English holding your career back?",
+opts:[{t:"No, it's an asset",s:3},{t:"Not really, but it could be sharper",s:2},{t:"Yes, a little",s:1},{t:"Yes — it's the main thing in my way",s:0}],area:"confidence"}
 ];
 
-const areaInfo = {
+const areaInfo={
 response:{name:"Real-Time Fluency",
 strong:"You respond naturally and in the moment — a real strength. Coaching would sharpen this into a genuine edge.",
 mid:"You get there, but there's a lag between thinking and speaking. This is one of the most satisfying things to fix — and it comes quickly with the right practice.",
@@ -130,84 +143,115 @@ mid:"Pressure is eroding your English just when you need it most. Coaching build
 focus:"Right now, the pressure of meetings and presentations is the main thing in your way. This is the core of what SpeakClear was built to fix."}
 };
 
-let current = 0;
-let scores = {};
-let maxScores = {};
+let current=0,scores={},maxScores={};
 
 function startQuiz(){
 document.getElementById('intro').classList.add('hidden');
 document.getElementById('quiz').classList.remove('hidden');
-current = 0; scores = {}; maxScores = {};
+current=0;scores={};maxScores={};
 questions.forEach(q=>{scores[q.area]=scores[q.area]||0;maxScores[q.area]=(maxScores[q.area]||0)+3;});
 renderQuestion();
 }
 
 function renderQuestion(){
-const q = questions[current];
-document.getElementById('progressFill').style.width = ((current)/questions.length*100)+'%';
-document.getElementById('qCount').textContent = 'Question '+(current+1)+' of '+questions.length;
-let html = '<div class="q-category">'+q.cat+'</div><div class="q-text">'+q.q+'</div><div class="options">';
-q.opts.forEach((o,i)=>{ html += '<button class="option" onclick="answer('+o.s+')">'+o.t+'</button>'; });
-html += '</div>';
-document.getElementById('questionBox').innerHTML = html;
+const q=questions[current];
+document.getElementById('progressFill').style.width=((current)/questions.length*100)+'%';
+document.getElementById('qCount').textContent='Question '+(current+1)+' of '+questions.length;
+let html='<div class="question"><div class="q-category">'+q.cat+'</div><div class="q-text">'+q.q+'</div><div class="options">';
+q.opts.forEach(o=>{html+='<button class="option" onclick="answer('+o.s+')">'+o.t+'</button>';});
+html+='</div></div>';
+document.getElementById('questionBox').innerHTML=html;
 }
 
 function answer(score){
-const q = questions[current];
-scores[q.area] += score;
+scores[questions[current].area]+=score;
 current++;
-if(current < questions.length){ renderQuestion(); }
-else{ showResults(); }
+if(current<questions.length){renderQuestion();}
+else{
+document.getElementById('quiz').classList.add('hidden');
+document.getElementById('nameScreen').classList.remove('hidden');
+window.scrollTo({top:0,behavior:'smooth'});
+}
 }
 
-function showResults(){
-document.getElementById('quiz').classList.add('hidden');
-const res = document.getElementById('results');
+function submitAndShow(){
+const name=document.getElementById('userName').value.trim()||'Unknown';
+const email=document.getElementById('userEmail').value.trim()||'Not provided';
+document.getElementById('nameScreen').classList.add('hidden');
+showResults(name,email);
+}
+
+function getRating(pct){
+if(pct>=75)return{label:'Strength',cls:'strong'};
+if(pct>=45)return{label:'Could be sharper',cls:'mid'};
+return{label:'Focus area',cls:'focus'};
+}
+
+function showResults(name,email){
+const res=document.getElementById('results');
 res.classList.remove('hidden');
 
-let total=0, max=0;
-for(let a in scores){ total+=scores[a]; max+=maxScores[a]; }
-const pct = Math.round(total/max*100);
+let total=0,max=0;
+for(let a in scores){total+=scores[a];max+=maxScores[a];}
+const pct=Math.round(total/max*100);
 
-let headline, verdict;
-if(pct>=80){ headline="Strong — with room to <em>sharpen</em>";
-verdict="Your spoken English is already a real asset. The areas below show where focused coaching would take you from <strong>good to genuinely impressive</strong> — the difference that gets noticed."; }
-else if(pct>=50){ headline="Capable — but <em>holding you back</em>";
-verdict="You clearly know your English, but it isn't yet reflecting how capable you are. The areas marked below are where a little focused coaching would make the <strong>biggest, fastest difference</strong>."; }
-else{ headline="Your English is <em>in your way</em>";
-verdict="Right now, your spoken English is costing you confidence and opportunities you deserve. The good news — every area below is <strong>fixable, and faster than you'd think</strong>, with the right coaching."; }
+const order=['response','pronunciation','vocabulary','confidence'];
+const ratings={};
+const barColors={strong:'#6fae8e',mid:'#d6a85a',focus:'#c97a6d'};
 
-const circ = 2*Math.PI*70;
-const offset = circ - (pct/100*circ);
+let headline,verdict;
+if(pct>=80){headline='Strong — with room to <em>sharpen</em>';
+verdict='Your spoken English is already a real asset, '+name+'. The areas below show where focused coaching would take you from <strong>good to genuinely impressive</strong> — the difference that gets noticed.';}
+else if(pct>=50){headline='Capable — but <em>holding you back</em>';
+verdict='You clearly know your English, '+name+', but it isn\'t yet reflecting how capable you are. The areas marked below are where a little focused coaching would make the <strong>biggest, fastest difference</strong>.';}
+else{headline='Your English is <em>in your way</em>';
+verdict='Right now, '+name+', your spoken English is costing you confidence and opportunities you deserve. The good news — every area below is <strong>fixable, and faster than you\'d think</strong>, with the right coaching.';}
 
-let html = '<h2>'+headline+'</h2>';
-html += '<div class="score-ring"><svg width="160" height="160"><circle cx="80" cy="80" r="70" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6"/><circle cx="80" cy="80" r="70" fill="none" stroke="#c9a84c" stroke-width="6" stroke-linecap="round" stroke-dasharray="'+circ+'" stroke-dashoffset="'+circ+'" id="ringFill"/></svg><div><div class="score-num">'+pct+'%</div><div class="score-label">Confidence Score</div></div></div>';
-html += '<div class="verdict">'+verdict+'</div>';
+const circ=2*Math.PI*70;
+const offset=circ-(pct/100*circ);
 
-html += '<div class="breakdown">';
-const order = ['response','pronunciation','vocabulary','confidence'];
+let html='<h2>'+headline+'</h2>';
+html+='<div class="score-ring"><svg width="160" height="160"><circle cx="80" cy="80" r="70" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6"/><circle cx="80" cy="80" r="70" fill="none" stroke="#c9a84c" stroke-width="6" stroke-linecap="round" stroke-dasharray="'+circ+'" stroke-dashoffset="'+circ+'" id="ringFill"/></svg><div><div class="score-num">'+pct+'%</div><div class="score-label">Confidence Score</div></div></div>';
+html+='<div class="verdict">'+verdict+'</div><div class="breakdown">';
+
 order.forEach(a=>{
-const apct = Math.round(scores[a]/maxScores[a]*100);
-let rating, cls, note;
-if(apct>=75){ rating="Strength"; cls="strong"; note=areaInfo[a].strong; }
-else if(apct>=45){ rating="Could be sharper"; cls="mid"; note=areaInfo[a].mid; }
-else{ rating="Focus area"; cls="focus"; note=areaInfo[a].focus; }
-const barColor = cls==='strong'?'#6fae8e':cls==='mid'?'#d6a85a':'#c97a6d';
-html += '<div class="break-row"><div class="break-head"><div class="break-name">'+areaInfo[a].name+'</div><div class="break-rating '+cls+'">'+rating+'</div></div><div class="break-meter"><div class="break-meter-fill" style="width:'+apct+'%;background:'+barColor+'"></div></div><div class="break-note">'+note+'</div></div>';
+const apct=Math.round(scores[a]/maxScores[a]*100);
+const r=getRating(apct);
+ratings[a]=r.label;
+const note=areaInfo[a][r.cls==='strong'?'strong':r.cls==='mid'?'mid':'focus'];
+html+='<div class="break-row"><div class="break-head"><div class="break-name">'+areaInfo[a].name+'</div><div class="break-rating '+r.cls+'">'+r.label+'</div></div><div class="break-meter"><div class="break-meter-fill" style="width:'+apct+'%;background:'+barColors[r.cls]+'"></div></div><div class="break-note">'+note+'</div></div>';
 });
-html += '</div>';
 
-html += '<div class="cta-box"><h3>Ready to fix the gaps you just <em>saw?</em></h3><p>Book an informal chat with Graham — the real coach behind SpeakClear. No pressure, no obligation. Just an honest conversation about where you are and how quickly you could improve.</p><a href="https://tally.so/r/kdJWVJ" class="btn">Book Your Informal Chat</a></div>';
+html+='</div><div class="cta-box"><h3>Ready to fix the gaps you just <em>saw?</em></h3><p>Book an informal chat with Graham — the real coach behind SpeakClear. No pressure, no obligation. Just an honest conversation about where you are and how quickly you could improve.</p><a href="https://tally.so/r/kdJWVJ" class="btn">Book Your Informal Chat</a></div>';
+html+='<button class="restart" onclick="restart()">Take the assessment again</button>';
 
-html += '<button class="restart" onclick="restart()">Take the assessment again</button>';
-
-res.innerHTML = html;
+res.innerHTML=html;
 window.scrollTo({top:0,behavior:'smooth'});
-setTimeout(()=>{ document.getElementById('ringFill').style.transition='stroke-dashoffset 1.2s ease'; document.getElementById('ringFill').style.strokeDashoffset=offset; },100);
+setTimeout(()=>{
+const ring=document.getElementById('ringFill');
+if(ring){ring.style.transition='stroke-dashoffset 1.2s ease';ring.style.strokeDashoffset=offset;}
+},100);
+
+// Send results to Graham via Formspree
+fetch(FORMSPREE_URL,{
+method:'POST',
+headers:{'Content-Type':'application/json','Accept':'application/json'},
+body:JSON.stringify({
+name:name,
+email:email,
+overall_score:pct+'%',
+verdict:pct>=80?'Strong — room to sharpen':pct>=50?'Capable but held back':'English in their way',
+real_time_fluency:ratings['response'],
+pronunciation:ratings['pronunciation'],
+vocabulary:ratings['vocabulary'],
+confidence:ratings['confidence']
+})
+}).catch(()=>{});
 }
 
 function restart(){
 document.getElementById('results').classList.add('hidden');
+document.getElementById('nameScreen').classList.add('hidden');
 document.getElementById('intro').classList.remove('hidden');
 }
 </script>
